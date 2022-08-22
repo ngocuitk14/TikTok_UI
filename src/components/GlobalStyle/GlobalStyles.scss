@@ -2,18 +2,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
+
+    --black: #000;
+    --text-color: #333;
+
+    --default-layout-header-height: 60px;
+    --default-layout-width: 1150px; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
     font-size: x-large;
 }
 
-* {
-    box-sizing: border-box;
+button, input, [tabIndex] {
+    border: none;
+    outline: none;
 }
 
-html {
-
-}
-
-body {
-
+a[href] {
+    color: var(--text-color);
 }
