@@ -2,21 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
-
-    --primary: rgba(254, 44, 85, 1.0);
+    --primary: rgba(254, 44, 85, 1);
     --white: #fff;
     --black: #000;
     --text-color: #333;
 
     --default-layout-header-height: 60px;
-    --default-layout-width: 1150px; 
+    --default-layout-width: 1150px;
+    --default-layout-horizontal-spacer: 24px;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 html {
@@ -29,7 +28,9 @@ body {
     font-size: x-large;
 }
 
-button, input, [tabIndex] {
+button,
+input,
+[tabIndex] {
     border: none;
     outline: none;
 }
