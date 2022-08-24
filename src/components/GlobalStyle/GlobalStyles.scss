@@ -38,3 +38,19 @@ input,
 a[href] {
     color: var(--text-color);
 }
+
+body {
+    .tippy-box {
+        background-color: rgba(84, 84, 84, 0.92);
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+    .tippy-arrow {
+        color:rgba(84, 84, 84, 0.92);
+    }
+    .tippy-content {
+        padding: 8px 9px;
+    }
+}

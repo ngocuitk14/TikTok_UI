@@ -12,14 +12,22 @@
     background-color: #fff;
     width: 100%;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 11px 16px;
+    justify-content: flex-start;
+
+    &.separate {
+        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    }
 
     &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }
 }
 
+
+
+// Menu Popper
 .header {
     position: relative;
     height: 50px;

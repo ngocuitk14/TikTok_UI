@@ -65,7 +65,9 @@
     }
 }
 
-
+.menu-items {
+    width: 224px;
+}
 
 .clear,
 .loading{
@@ -94,7 +96,9 @@
 }
 
 .actions {
-    
+    display: flex;
+    align-items: center;
+
 }
 
 .more-btn {
@@ -105,7 +109,20 @@
     cursor: pointer;
     line-height: 1.8rem;
 }
-// Menu
-.menu-items {
-    width: 224px;
+
+.action-btn {
+    font-size: 2.2rem;
+    background-color: transparent;
+    color: rgba(22, 24, 35);
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
 }
