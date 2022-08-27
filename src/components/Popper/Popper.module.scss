@@ -1,5 +1,7 @@
 .wrapper {
     width: 100%;
+    display: block;
+    align-items: center;
     max-height: min((100vh - 96px) - 60px, 734px);
     min-height: 100px;
     border-radius: 8px;

@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const cx = classNames.bind(styles);
 
 function Search() {
-    const [searchValue, SetSearchValue] = useState('');
+    const [searchValue, setSearchValue] = useState('');
     const [searchResult, setSearchResult] = useState([]);
     const [showResult, setShowResult] = useState(true);
     const [loading, setLoading] = useState(false);
@@ -38,9 +38,15 @@ function Search() {
     }, [debounced]);
 
     const handleClear = () => {
-        SetSearchValue('');
+        setSearchValue('');
         setSearchResult([]);
         inputRef.current.focus();
+    };
+    const handleChange = (e) => {
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+        }
     };
     const handleHideResult = () => {
         setShowResult(false);
@@ -64,10 +70,12 @@ function Search() {
             <div className={cx('search')}>
                 <input
                     ref={inputRef}
-                    value={searchValue.trim() && searchValue}
+                    // value={searchValue.trim() && searchValue}
+                    value={searchValue}
                     placeholder="Search accounts and videos..."
                     spellCheck={false}
-                    onChange={(e) => SetSearchValue(e.target.value)}
+                    onChange={handleChange}
+                    // onChange={(e) => setSearchValue(e.target.value)}
                     onFocus={() => setShowResult(true)}
                 />
                 {!!searchValue && !loading && (
@@ -76,7 +84,7 @@ function Search() {
                     </button>
                 )}
                 {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
-                <button className={cx('search-btn')}>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                     <SearchIcon />
                 </button>
             </div>
